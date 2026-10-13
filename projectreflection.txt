@@ -1,0 +1,13 @@
+Building a Modular Cypress Test Suite for a Modern Web App
+
+Project Reflection
+
+In this project, I worked on building a modular and maintainable Cypress test suite for the Cypress Mini Shop application. I organized the tests into separate spec files for authentication, dashboard, and product workflows. This structure helps improve readability, reusability, and maintenance.
+
+I implemented reusable custom commands, including `cy.login()` and `cy.addProduct()`, to avoid repeating the same actions across multiple tests. I used a fixture file, `user.json`, to manage test user data and explored environment variables using `Cypress.env()` to configure login credentials.
+
+I used `cy.intercept()` to monitor or mock product API requests and verify how the application displays product information. I also used `cy.session()` to cache login state, reducing repeated login steps and improving test execution efficiency.
+
+To investigate flaky tests, I explored Cypress debugging tools and replaced fixed timing assumptions with retryable assertions using `.should()`. I also worked on running multiple spec files and configuring Mochawesome to generate an HTML report containing test results and execution details.
+
+Overall, this project helped me understand how Cypress features can be combined to create reliable, reusable, and organized end-to-end tests. It also improved my understanding of test debugging, authentication management, API interception, and test reporting.
